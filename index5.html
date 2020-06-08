@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body{
+  position: absolute;
+  background:url(./image/yun.jpg);
+
+  }
+.cat{
+  background: url(./image/smallcat.jpg);
+  position: absolute;
+  top: 30px;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+}
+
+.catBark{
+  position: absolute;
+  top: 0px;
+  height: 40px;
+  width: 396px;
+  background-color:plum;
+  border: 2px solid gold;
+}
+
+h1 {
+  position: absolute;
+  top: 420px;
+  text-align: center;
+  border: 2px solid green;
+  width: 390px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+button{
+  border-radius: 15px;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 600;
+}
+#feedBtn{
+  position: absolute;
+  width:60px;
+  top: 30px;
+  left: 410px
+}
+#runBtn{
+  position: absolute;
+  width: 60px;
+  top: 100px;
+  left: 410px
+}
+#fuhuo{
+  position: absolute;
+  width: 60px;
+  top: 170px;
+  left: 410px
+
+}
+#happy{
+  position: absolute;
+  width: 80px;
+  top: 240px;
+  left: 410px
+}
+#change{
+  position:absolute;
+  top: 540px;
+  left: 320px;
+}
+.home{
+  position: absolute;
+  top: 30px;
+  left: 500px;
+  width: 600px;
+  height: 390px;
+}
+.linyang{
+  position: absolute;
+  left: 300px;
+  letter-spacing: 60px;
+  color: brown;
+  left: 170px;;
+}
+.linyang2{
+  position: absolute;
+  top: 0px;
+  width: 550px;
+  height: 30px;
+  left: 520px;
+  background-color: darksalmon;
+  border:2px solid orange;
+}
+
+#world{
+  position: absolute;
+  width: 60px;
+  top: 320px;
+  left: 410px;
+  padding-left: 10px;
+  
+}
+.hide{
+  display: none;
+}
+.exercise{
+  position:absolute;
+  top: 200px;
+  width: 370px;
+  left: 0px;
+
+}
+.sleep{
+  width: 300px;
+  margin: auto;
+
+
+}
+#guessInput{
+  position: absolute;
+  top: 460px;
+  left: 500px;
+}
+#fireButton{
+  position: absolute;
+  top: 460px;
+  left: 700px;
+}
+#messageArea{
+  position: absolute;
+  left: 900px;
+  top: 700px;
+}
+
+.keji{
+border:solid 2px slategray;
+position: absolute;
+left: 530px;
+width: 100px;
+top: 30px;
+}
+.longmao{
+border:solid 2px slategray;
+position: absolute;
+left: 810px;
+width: 100px;
+top: 35px;
+
+}
+.pig{
+border:solid 2px slategray;
+position: absolute;
+left: 810px;
+width: 100px;
+top: 250px;
+}
+.rabbit{
+border:solid 2px slategray;
+position: absolute;
+left: 530px;
+width: 100px;
+top: 240px;
+}
+
+.Bark{
+  position: absolute;
+  height: 40px;
+  width: 396px;
+  left: 500px;
+  top: 500px;
+  background-color:plum;
+}
+.l1{
+position: absolute;
+left: 570px;
+top:100px ;
+font-size: large;
+background-color: chartreuse;
+width: 70px;
+text-align: center;
+}
+
+.l2{
+position: absolute;
+left: 850px;
+top:130px ;
+font-size: large;
+background-color: chartreuse;
+width: 70px;
+text-align: center;
+}
+.l3{
+position: absolute;
+left: 850px;
+top:330px ;
+font-size: large;
+background-color: chartreuse;
+width: 70px;
+text-align: center;
+}
+.l4{
+position: absolute;
+left: 570px;
+top:310px ;
+font-size: large;
+background-color: chartreuse;
+width: 70px;
+text-align: center;
+}
+
+
+
+
+</style>
+
+</script>
+</head>
+<body>
+
+  <div class="cat" id="cat" ></div>
+  <img class="sleep" id="sleep" src="./image/sleep.jpg">
+  <img  class="exercise" id="exercise" src="./image/exercise.gif">
+
+  <h1 id="catStatus">这是我的状态</h1>
+  <div id="catBark" class="catBark"><div id="say"></div></div>
+  <button id="feedBtn" onclick="cat.eat()">喂食</button>
+  <button value="睡觉" id="runBtn" onclick="cat.run()">睡觉</button>
+  <button id ="fuhuo" onclick="cat.resurrect()">复活</button>
+  <button id="happy" onclick="cat.play()">猫抓板</button>
+  <button value="锻炼"  onclick="cat.change()" id="world">锻炼</button>
+
+
+  <div id="zs" class="zs"><img src="./image/" alt=""></div>
+  <input type="text" id="guessInput" placeholder="请输入你认为宠物编号">
+  <input type="button" id="fireButton" onclick="cat.friend()"value="配对">
+  <div class="linyang2"><div class="linyang">寻找好朋友</div></div>
+  <img class="home" src="./image/home.JPG"></img>
+
+  <img id="keji" class="keji" src="./image/keji.jpg" alt="" onclick="cat.like1()"><div class="l1">1号</div>
+  <img id="longmao" class="longmao" src="./image/longmao.jpg" alt=""onclick="cat.like2()"><div class="l2">2号</div>
+  <img id="pig" class="pig" src="./image/pig.jpg" alt="" onclick="cat.like3()"><div class="l3">3号</div>
+  <img id="rabbit" class="rabbit" src="./image/rabbit.jpg" alt="" onclick="cat.like4()"><div class="l4">4号</div>
+  <div id="Bark" class="Bark"><div id="speak"></div></div>
+
+
+
+
+
+  <script src="obj5.js"></script>
+</body>
+</html>
